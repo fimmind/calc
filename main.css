@@ -1,0 +1,112 @@
+@font-face {
+    font-family: BebasNeueLight;
+    src: url("./fonts/BebasNeue-Light.otf");
+}
+* {
+    font-family: BebasNeueLight;
+    margin: 0px;
+    padding: 0px;
+}
+
+.calc {
+    width: 549px;
+    height: 901px;
+    border: 5px solid #ffffff;
+    background-color: #33485c;
+    color: #fdfcfb;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr;
+}
+
+#display {
+    text-align: right;
+    font-size: 120px;
+    border-bottom: 1px solid #ffffff;
+    padding-top: 20px;
+    padding-right: 28px;
+    padding-left: 28px;
+    overflow: scroll;
+    white-space: nowrap;
+    grid-column: 1/5;
+}
+#display::-webkit-scrollbar:vertical {
+    display: none;
+}
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.2);
+}
+
+.JSCommunity {
+    padding-top: 14px;
+    text-align: center;
+    font-size: 33px;
+    grid-column: 1/5;
+}
+.JSCommunity .little {
+    font-size: 19px;
+}
+
+.input {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 47px;
+    margin: 0px auto;
+}
+.input span {
+    text-align: center;
+    font-size: 80px;
+    width: 77px;
+    height: 88px;
+    padding-top: 18px;
+    cursor: pointer;
+}
+.input span:hover {
+    background: rgba(0, 0, 0, 0.36);
+    background-color: #000000;
+    opacity: 0.36;
+}
+
+.button-0 {
+    grid-column: 2/3
+}
+.button-equal {
+    grid-column: 4/5
+}
+
+.msgBox {
+    opacity: 0;
+    z-index: -1;
+    border: 2px solid #373737;
+    width: 600px;
+    height: auto;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: #ffffff;
+    box-shadow: 0px 0px 10px;
+    text-align: center;
+    padding: 20px;
+}
+.msgBox p {
+    font-size: 100px;;
+}
+.msgBox .OKButton {
+    font-size: 50px;
+    background: #33485c;
+    margin: 0px, auto;
+    padding-top: 10px;
+    color: white;
+    cursor: pointer;
+}
