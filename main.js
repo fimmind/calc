@@ -75,6 +75,8 @@ $(document).ready(function(){
         });
     }
     $(".button-MR").click(()=>{
-        $("#display").html($("#display").html() + memoryCell);
+        $("#display")
+            .html($("#display").html() + memoryCell)
+            .scrollLeft($("#display").prop("scrollWidth"));
     });
 });
