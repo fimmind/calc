@@ -1,15 +1,6 @@
-function toMessageAboutWrongInput(){
-    $(".msgBox")
-        .css({"z-index": 1})
-        .animate({opacity: 1}, 100);
-}
-
-function getInput(){
-    return $("#display").html().replace("÷", "/").replace(/([^\d])0(\d)/, "$1$2");
-}
-
 $(document).ready(function(){
-    // msgBox closing
+    // TODO: keyboard shortcuts
+
     $(".msgBox .OKButton").click(()=>{
         $(".msgBox").animate({opacity: 0, "z-index": -1}, 100);
     });
@@ -80,3 +71,23 @@ $(document).ready(function(){
             .scrollLeft($("#display").prop("scrollWidth"));
     });
 });
+
+// ...---===''' functions '''===---...
+
+/**
+ * @return {}
+ */
+function toMessageAboutWrongInput(){
+    $(".msgBox")
+        .css({"z-index": 1})
+        .animate({opacity: 1}, 100);
+}
+
+/**
+ * @return {string}
+ */
+function getInput(){
+    return $("#display").html()
+        .replace("÷", "/")
+        .replace(/([^\d])0(\d)/, "$1$2"); // eval understand number begining for
+}
